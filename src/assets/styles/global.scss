@@ -1,0 +1,93 @@
+#root {
+  position: relative;
+  font-family: 'Proxima Nova';
+  min-height: 100vh;
+  //overflow: hidden;
+  color: $supportColor;
+}
+
+.container {
+  max-width: none;
+}
+
+.btn-main {
+  color: #fff;
+  background: $subColor;
+  border-color: $subColor;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  outline-color: #000;
+  &:hover {
+    color: $supportColor;
+    background: $subColor;
+  }
+  &:focus {
+    //box-shadow: 0 0 0 4px rgba(59, 44, 67, 0.5) !important;
+    box-shadow: 0 0 0 4px $supportColor!important;
+  }
+}
+
+.no-blue {
+  user-select: none;
+}
+
+*::selection {
+  background: $mainColor;
+}
+.dropdown {
+  &__toggle {
+    background: transparent;
+    border: 0;
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+    padding-left: 4px;
+    padding-right: 4px;
+    @media (max-width: 460px) {
+      margin-top: 4px !important;
+      font-size: 18px;
+    }
+    &:after {
+      margin-left: 10px;
+      vertical-align: 0.18rem;
+    }
+    &:hover {
+      color: #fff;
+      text-decoration: underline;
+      background: transparent !important;
+    }
+    &:focus {
+      border: 0 !important;
+      box-shadow: none !important;
+      background: transparent !important;
+    }
+  }
+  &__menu {
+    text-align: right;
+    right: 0;
+    transform: translateY(13px);
+    border-radius: 0 0 .25rem .25rem;
+    padding: 0;
+    min-width: 12rem;
+    width: 100%;
+    @media (max-width: 460px) {
+      transform: translateY(16px);
+    }
+  }
+  &__item {
+    font-size: 18px;
+    font-weight: 500;
+    padding: .30rem 1.25rem;
+    &:focus {
+      background: $supportColor !important;
+    }
+    &:disabled {
+      background: $supportColor !important;
+  }
+  }
+}
+.dropdown-divider {
+  margin: 0;
+}
+// другой стиль переписи классов

@@ -1,0 +1,34 @@
+$mainColor: #EFD2C0;
+$subColor: #3B2C43;
+$supportColor: #B0927B;
+
+.navbar {
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: $subColor;
+  @media (max-width: 767px) {
+    position: static;
+  }
+  &__logo {
+    display: flex;
+    align-items: flex-end;
+    span {
+      margin-bottom: 8px;
+      font-size: 24px;
+      @media (max-width: 380px) {
+        display: none;
+      }
+    }
+  }
+  &__link {
+    display: inline-block;
+    margin-left: 13px;
+    font-size: 20px;
+  }
+}
+.navbar-brand {
+  font-weight: 700;
+}

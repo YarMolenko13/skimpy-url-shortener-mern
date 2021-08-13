@@ -1,0 +1,348 @@
+// ================= импорты ===================
+@import "~bootstrap/scss/bootstrap";
+@import "fonts";
+// ================= переменные ================
+$mainColor: #EFD2C0;
+$subColor: #3B2C43;
+$supportColor: #B0927B;
+$subSupportColor: rgb(95, 81, 101);
+
+$mNavbarHeight: 76px;
+
+// ================= основой блок ==============
+@import "global";
+
+.spinner-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .spinner-border {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+// home
+.home {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  h2 {
+    font-weight: 700;
+    font-size: 50px;
+  }
+  @media (max-width: 767px) {
+    height: calc(100vh - 76px);
+    &__left {
+      padding-top: 0 !important;
+    }
+  }
+  @media (max-width: 500px) {
+    h2 {
+      font-size: 34px;
+    }
+    h3 {
+      font-size: 1.2rem;
+    }
+  }
+  &__bg {
+    position: relative;
+    z-index: -1;
+    width: 100%;
+  }
+}
+
+// form
+.form {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 767px) {
+    height: calc(100vh - 76px);
+    padding-bottom: 60px;
+  }
+  &__card {
+    width: 35rem;
+    border: 0;
+    @media (max-width: 700px) {
+      width: auto !important;
+    }
+    @media (max-width: 400px) {
+      padding: 0 !important;
+    }
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 2rem;
+    p {
+      font-size: 36px;
+      font-weight: 600;
+    }
+    span {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    @media (max-width: 415px) {
+      p {
+        font-size: 30px;
+      }
+    }
+  }
+  &__get-started {
+    color: #160e18;
+    &:hover {color: $subColor;}
+  }
+  &__input {
+    //width: 100% !important;
+    border-radius: 0.25rem !important;
+    border: 2px solid $subColor;
+    color: $subColor;
+    &_pass {
+      border-radius: .25rem 0 0 .25rem !important;
+    }
+    &::placeholder {
+      color: $subColor;
+    }
+    &:focus {
+      border: 2px solid $supportColor;
+      box-shadow: 0 0 0 2px $supportColor!important;
+    }
+  }
+  #button-addon1 {
+    height: auto !important;
+    padding: 0 .25rem !important;
+    i {}
+    font-size: 20px;
+    &:hover {
+      color: #fff !important;
+    }
+    &:focus {
+      box-shadow: 0 0 0 3px $supportColor!important;
+    }
+  }
+  &__footer {
+
+  }
+  &__forget {
+    color: $subColor;
+    &:hover {color: $subColor;}
+  }
+  &__btn {
+    padding-top: 1px !important;
+    padding-bottom: 1px !important;
+  }
+}
+
+// registration
+.registration {
+
+}
+
+// validation
+.validation{
+  &__msg {
+    font-size: 15px;
+    color: $red-300;
+  }
+  &__field {
+    &:before {
+      content: '';
+      display: block;
+      height: 7px;
+      width: 7px;
+      border-radius: 50%;
+      background: #826c61;
+      margin-right: 5px;
+    }
+  }
+}
+
+// links
+.links {
+  //overflow-y: hidden;
+  &__body {
+    height: 100%;
+    padding-top: 76px;
+    @media (max-width: 768px) {
+      height: calc(100vh - 76px) !important;
+      padding-top: 0;
+      display: flex !important;
+      flex-wrap: nowrap;
+      flex-direction: column !important;
+    }
+  }
+}
+
+.aside-links {
+  color: #fff;
+  position: relative;
+  height: 100%;
+  overflow-y: auto;
+  font-size: 22px;
+  background: $supportColor;
+  @media (max-width: 767px) {
+    flex: 1 0 auto;
+    height: auto;
+    order: 2;
+  }
+  &__add-first {
+    background: $subSupportColor !important;
+    width: 100%;
+    margin-top: 1.3rem;
+    font-size: 1rem !important;
+    padding: 0.5rem 0;
+    &:hover {
+      transform: none !important ;
+    }
+  }
+  &__result {
+    background: $subSupportColor;
+    span {
+      font-size: 18px;
+      width: auto;
+    }
+    position: relative;
+    padding: 10px 0;
+    color: rgba(59, 44, 67, 0.83);
+  }
+  &__item {
+    cursor: pointer;
+  }
+}
+.aside-link {
+  overflow: hidden;
+  cursor: pointer;
+  &__date {
+    margin-bottom: -7px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #e9e9e9;
+  }
+  &__title {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.25rem;
+  }
+  &__checkbox {
+    //position: absolute;
+    //left: -32px;
+    //background: transparent;
+  }
+  &__short-url {
+    color: $subSupportColor;
+    font-size: 1rem;
+  }
+}
+.aside-link-active {
+  cursor: pointer;
+  position: relative;
+  background: $subSupportColor;
+  .aside-link__short-url {
+    color: $mainColor;
+  }
+}
+
+.link-detail {
+  @media (max-width: 600px) {
+    padding: 12px !important;
+  }
+  @media (max-width: 767px) {
+    padding: 20px 12px !important;
+    //flex: 0 1 20%;
+    min-height: 150px !important;
+    //height: auto;
+    //max-height: 20%;
+    //width: 100%;
+    order: 1;
+    &__body {
+      height: 100%;
+      h2 {
+        font-size: 1.7rem !important;
+      }
+    }
+    &__date {
+      font-size: 0.9rem !important;
+    }
+    &__link {
+      font-size: 0.9rem !important;
+    }
+    &__actions {
+      font-size: .8rem !important;
+      margin: 20px 0 !important;
+      flex-direction: column;
+      a {
+      }
+      .my-button {
+        padding: 1px 6px;
+      }
+    }
+  }
+  &__body {
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 0;
+      //line-height: 1.7rem;
+    }
+  }
+  &__date {
+    font-size: 1.2rem;
+  }
+  &__link {
+    text-decoration: none;
+    font-weight: 500;
+    color: $subSupportColor;
+    font-size: 1.2rem;
+    &:hover {
+      color: $subColor;
+    }
+  }
+  &__btns {
+    display: flex;
+    flex-wrap: nowrap;
+    @media (max-width: 940px) {
+      margin-top: 10px;
+    }
+  }
+  &__actions {
+    display: flex;
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin: 25px 0;
+    a {
+      text-decoration: none;
+      color: $supportColor;
+      transition: all .2s ease;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    @media (max-width: 940px) {
+      flex-direction: column;
+    }
+    .my-button {
+      @media (max-width: 892px) {
+        //display: none;
+        height: 26px !important;
+      }
+    }
+  }
+  &__checked-info {
+    @media (max-width: 767px) {
+      display: none;
+      margin-top: 0 !important;
+      button {
+        margin-bottom: 26px !important;
+        margin-right: 0 !important;
+      }
+      div {
+        i {
+          font-size: 40px !important;
+        }
+      }
+    }
+  }
+}
