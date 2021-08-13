@@ -2,13 +2,9 @@
 
 ### Fullstack app
 
-## Stack:
-* ExpressJs
+## Frontend stack:
 * React
 * Mobx
-* MongoDB
 * Bootstrap
-
-### https://skimpy-react.herokuapp.com/
 
 
