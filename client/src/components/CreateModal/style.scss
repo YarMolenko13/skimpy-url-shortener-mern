@@ -1,0 +1,33 @@
+$mainColor: #EFD2C0;
+$subColor: #3B2C43;
+$supportColor: #B0927B;
+
+//.modal {
+//  width: 100%;
+//}
+//
+//.modal-dialog {
+//  width: 80% !important;
+//}
+//
+//.modal-content {
+//  width: 100%;
+//}
+//.modal-title {
+//
+//}
+
+.modal-btn {
+  font-size: 20px;
+  padding: 6px 12px;
+  border: 0;
+}
+.modal-close {
+  background: #826c61;
+  &:hover {
+    background: #826c61;
+    color: $subColor;
+  }
+}
+.modal-create {
+}
