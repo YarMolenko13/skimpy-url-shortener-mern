@@ -26,11 +26,15 @@ function App() {
     }
 
     const setUser = async (data) => {
-        await getUser(data.userId).then(
+        try {
+                    await getUser(data.userId).then(
             data => {
                 user.setUser(data)
                 user.setIsAuth(true)
             })
+        }
+        catch (e) {
+            console.log(e)}
     }
 
     const createLinkModal = () => {
