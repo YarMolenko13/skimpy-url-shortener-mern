@@ -11,7 +11,7 @@
 * Bootstrap
 
 ### Url
-> -
+> https://skimpy-client-react.herokuapp.com/
 
 ### Swagger documentation
-> https://sparkys-api.herokuapp.com/api/docs/
+> https://app.swaggerhub.com/apis-docs/yarmolenko/skimpy-api/1.0.0
